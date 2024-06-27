@@ -39,7 +39,10 @@
     </div>
 
     <!-- language -->
-    <div class="flex justify-center items-center space-x-4 pt-[56px] pb-[30px]">
+    <div
+      v-if="props.showMenuBar"
+      class="flex justify-center items-center space-x-4 pt-[56px] pb-[30px]"
+    >
       <span
         ><svg
           width="40"
@@ -83,6 +86,13 @@ const menuItems = ref([
   { id: 4, lable: "Contact us" },
   { id: 5, lable: "About us" },
 ]);
+
+const props = defineProps({
+  showMenuBar: {
+    type: Boolean,
+    default: false,
+  },
+});
 </script>
 
 <style lang="scss" scoped></style>

@@ -101,7 +101,7 @@
         </svg>
       </button>
 
-      <button>
+      <button @click="$emit('on-menu-click')">
         <svg
           width="40"
           height="40"
@@ -121,6 +121,7 @@
 </template>
 
 <script setup>
+const $emit = defineEmits(["on-menu-click"]);
 </script>
 
 <style lang="scss" scoped></style>
